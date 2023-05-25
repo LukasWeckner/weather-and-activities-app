@@ -1,5 +1,3 @@
-export function Button({onAddActivity}) {
-    return (
-        <button type="submit" onClick={onAddActivity}>Submit</button>
-    )
+export function Button() {
+  return <button type="submit">Submit</button>;
 }
