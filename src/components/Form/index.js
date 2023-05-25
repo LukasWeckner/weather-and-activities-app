@@ -1,5 +1,5 @@
 import React from "react";
-import "./Form.css"
+import "./Form.css";
 import { Button } from "../Button/index.js";
 
 export function Form({ onAddActivity }) {
@@ -7,8 +7,12 @@ export function Form({ onAddActivity }) {
     event.preventDefault();
     const formData = new FormData(event.target);
     const data = Object.fromEntries(formData);
-    console.log(data);
-    onAddActivity(data);
+    // console.log(data);
+    const inputObject = {
+      name: data.name,
+      isForGoodWeather: !!data.isForGoodWeather,
+    };
+    onAddActivity(inputObject);
     event.target.reset();
     event.target.elements.name.focus();
   }
