@@ -1,11 +1,12 @@
 import "./List.css";
-import { isGoodWeather } from "../../App.js";
 
-export function List({ activities }) {
+export function List({ activities, weatherState, emoji }) {
   return (
     <>
       <h2>
-        {isGoodWeather ? "the weather is awesome" : "bad weather, stay inside"}
+        {weatherState
+          ? `the weather is awesome ${emoji}`
+          : `bad weather, stay inside ${emoji}`}
       </h2>
       <ul className="list">
         {activities.map((activity) => (
