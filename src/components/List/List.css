@@ -1,0 +1,8 @@
+.list {
+  margin: 3rem;
+}
+
+.listItem {
+  border: 1px solid black;
+  width: 100%;
+}
