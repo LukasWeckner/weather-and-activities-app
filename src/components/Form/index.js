@@ -9,16 +9,17 @@ export function Form({ onAddActivity }) {
     console.log(data);
     onAddActivity(data);
     event.target.reset();
+    event.target.elements.name.focus();
   }
 
   return (
     <form onSubmit={handleSubmit}>
       <h1>Add new activity</h1>
       <label htmlFor="form-input">Name</label>
-      <input name="name" id="form-input"></input>
+      <input name="name" id="form-input" autoFocus></input>
       <label htmlFor="form-checkbox">Good weather activity</label>
       <input type="checkbox" name="isForGoodWeather" id="form-checkbox"></input>
-      <Button  />
+      <Button />
     </form>
   );
 }
