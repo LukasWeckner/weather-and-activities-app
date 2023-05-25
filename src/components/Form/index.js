@@ -1,4 +1,5 @@
 import React from "react";
+import "./Form.css"
 import { Button } from "../Button/index.js";
 
 export function Form({ onAddActivity }) {
@@ -12,7 +13,7 @@ export function Form({ onAddActivity }) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="form" onSubmit={handleSubmit}>
       <h1>Add new activity</h1>
       <label htmlFor="form-input">Name</label>
       <input name="name" id="form-input"></input>
